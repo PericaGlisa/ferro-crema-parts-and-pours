@@ -1,0 +1,4 @@
+- Keep TanStack Start SSR and standard link navigation; disabling scroll restoration makes destination pages start at the top while explicit resetScroll:false preserves filter interactions.
+- Keep the mobile category navigation in a separate accessible Sheet with native disclosure groups, so the header stays compact and keyboard operation remains native.
+- Netlify uses the Nitro netlify preset selected by the hosting environment; never add SPA fallback redirects that shadow SSR routes.
+- Brand icons derive from the same generated espresso-screen asset; store compact favicon variants in public and optimize display photographs at authoring time.

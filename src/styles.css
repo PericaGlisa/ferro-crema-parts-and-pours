@@ -1,0 +1,323 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Ferro Crema design system.
+ * ferro = machined dark, steel = brushed metal, paper = background,
+ * crema = warm accent reserved for actions/highlights, ok/alert = stock states.
+ */
+
+@theme inline {
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
+  --radius-2xl: 8px;
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --color-ferro: var(--ferro);
+  --color-steel: var(--steel);
+  --color-paper: var(--paper);
+  --color-crema: var(--crema);
+  --color-crema-foreground: var(--crema-foreground);
+  --color-ok: var(--ok);
+  --color-alert: var(--alert);
+  --color-hero: var(--hero);
+  --color-hero-foreground: var(--hero-foreground);
+  --color-hero-muted: var(--hero-muted);
+  --color-hero-accent: var(--hero-accent);
+  --color-image: var(--image);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --shadow-tile: 0 1px 2px oklch(0.24 0.01 240 / 0.06);
+  --shadow-lift: 0 10px 30px -12px oklch(0.24 0.01 240 / 0.22);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --ferro: oklch(0.235 0.009 125);
+  --steel: oklch(0.49 0.012 125);
+  --paper: oklch(0.992 0.001 110);
+  --crema: oklch(0.79 0.132 113);
+  --crema-foreground: oklch(0.235 0.025 120);
+  --hero: oklch(0.19 0.016 120);
+  --hero-foreground: oklch(0.985 0.004 100);
+  --hero-muted: oklch(0.78 0.015 110);
+  --hero-accent: oklch(0.83 0.112 113);
+  --image: oklch(0.947 0.002 110);
+  --ok: oklch(0.505 0.086 157);
+  --alert: oklch(0.505 0.187 27);
+
+  --background: var(--paper);
+  --foreground: var(--ferro);
+  --card: oklch(1 0 0);
+  --card-foreground: var(--ferro);
+  --popover: oklch(1 0 0);
+  --popover-foreground: var(--ferro);
+  --primary: var(--ferro);
+  --primary-foreground: oklch(0.985 0.003 90);
+  --secondary: oklch(0.955 0.006 110);
+  --secondary-foreground: var(--ferro);
+  --muted: oklch(0.968 0.003 110);
+  --muted-foreground: var(--steel);
+  --accent: oklch(0.947 0.018 113);
+  --accent-foreground: var(--crema-foreground);
+  --destructive: var(--alert);
+  --destructive-foreground: oklch(0.985 0.003 90);
+  --border: oklch(0.905 0.005 110);
+  --input: oklch(0.865 0.006 110);
+  --ring: var(--crema);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: var(--ferro);
+  --sidebar-primary: var(--ferro);
+  --sidebar-primary-foreground: oklch(0.985 0.003 90);
+  --sidebar-accent: oklch(0.955 0.003 240);
+  --sidebar-accent-foreground: var(--ferro);
+  --sidebar-border: oklch(0.898 0.005 240);
+  --sidebar-ring: var(--crema);
+}
+
+.dark {
+  --ferro: oklch(0.955 0.004 240);
+  --steel: oklch(0.672 0.017 236);
+  --paper: oklch(0.176 0.007 240);
+  --crema: oklch(0.775 0.082 74);
+
+  --background: var(--paper);
+  --foreground: var(--ferro);
+  --card: oklch(0.219 0.008 240);
+  --card-foreground: var(--ferro);
+  --popover: oklch(0.219 0.008 240);
+  --popover-foreground: var(--ferro);
+  --primary: oklch(0.955 0.004 240);
+  --primary-foreground: oklch(0.2 0.008 240);
+  --secondary: oklch(0.262 0.009 240);
+  --secondary-foreground: var(--ferro);
+  --muted: oklch(0.262 0.009 240);
+  --muted-foreground: var(--steel);
+  --accent: var(--crema);
+  --accent-foreground: oklch(0.2 0.01 70);
+  --border: oklch(1 0 0 / 12%);
+  --input: oklch(1 0 0 / 18%);
+  --ring: var(--crema);
+  --sidebar: oklch(0.219 0.008 240);
+  --sidebar-foreground: var(--ferro);
+  --sidebar-accent: oklch(0.262 0.009 240);
+  --sidebar-accent-foreground: var(--ferro);
+  --sidebar-border: oklch(1 0 0 / 12%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+  }
+  html {
+    scroll-padding-top: 160px;
+  }
+  img {
+    max-width: 100%;
+  }
+  main,
+  main section,
+  main form,
+  main aside,
+  main fieldset {
+    min-width: 0;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+  h1,
+  h2,
+  h3,
+  p {
+    overflow-wrap: break-word;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    letter-spacing: 0;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--crema);
+    outline-offset: 2px;
+  }
+  button,
+  a,
+  input,
+  select {
+    -webkit-tap-highlight-color: transparent;
+  }
+  select {
+    max-width: 100%;
+  }
+  input[type="checkbox"] {
+    accent-color: var(--ferro);
+  }
+  ::selection {
+    background: var(--crema);
+    color: var(--crema-foreground);
+  }
+}
+
+.safe-bottom {
+  padding-bottom: max(1.25rem, env(safe-area-inset-bottom));
+}
+.mobile-menu {
+  height: 100dvh;
+}
+.mobile-menu > button {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  top: 12px;
+  right: 12px;
+}
+@media (max-width: 639px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+  .product-grid {
+    gap: 10px;
+  }
+}
+
+.hero-photo {
+  object-position: 66% center;
+}
+.hero-shade {
+  background: linear-gradient(
+    90deg,
+    var(--hero) 0%,
+    color-mix(in oklch, var(--hero) 90%, transparent) 25%,
+    transparent 72%
+  );
+}
+.hero-enter {
+  animation: arrive 700ms ease-out both;
+}
+.product-picture img {
+  transition: transform 450ms ease;
+}
+.group:hover .product-picture img {
+  transform: scale(1.045);
+}
+.category-tile:hover .category-arrow {
+  transform: translate(3px, -3px);
+}
+.category-arrow {
+  transition: transform 200ms ease;
+}
+@keyframes arrive {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 767px) {
+  .hero-photo {
+    object-position: 62% center;
+  }
+  .hero-shade {
+    background: linear-gradient(
+      90deg,
+      color-mix(in oklch, var(--hero) 96%, transparent),
+      color-mix(in oklch, var(--hero) 65%, transparent) 60%,
+      color-mix(in oklch, var(--hero) 20%, transparent)
+    );
+  }
+}
+
+@utility container-shop {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@utility num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+@utility tech-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+/* Machined hairline pattern used on dark/steel surfaces */
+@utility machined {
+  background-image: repeating-linear-gradient(
+    90deg,
+    oklch(1 0 0 / 0.045) 0px,
+    oklch(1 0 0 / 0.045) 1px,
+    transparent 1px,
+    transparent 7px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}

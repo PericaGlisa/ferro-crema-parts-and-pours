@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="cremaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8C38E" />
+      <stop offset="60%" stop-color="#C8A16B" />
+      <stop offset="100%" stop-color="#8C6228" />
+    </radialGradient>
+    <linearGradient id="metalRim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A5258" />
+      <stop offset="50%" stop-color="#1C1F22" />
+      <stop offset="100%" stop-color="#2D3338" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Portafilter / Screen Rim -->
+  <circle cx="32" cy="32" r="30" fill="url(#metalRim)" stroke="#C8A16B" stroke-width="2" />
+  <circle cx="32" cy="32" r="26" fill="#1C1F22" stroke="#5E6A73" stroke-width="1.2" stroke-dasharray="2 2" />
+
+  <!-- Inner Crema Glow -->
+  <circle cx="32" cy="32" r="20" fill="url(#cremaGlow)" opacity="0.95" />
+
+  <!-- Center Mesh / Espresso Shower Screen Grid -->
+  <circle cx="32" cy="32" r="7" fill="#1C1F22" />
+  <circle cx="32" cy="32" r="2.5" fill="#FAF6EE" />
+
+  <!-- Screen Precision Perforations -->
+  <g fill="#1C1F22" opacity="0.8">
+    <circle cx="32" cy="18" r="1.4" />
+    <circle cx="32" cy="46" r="1.4" />
+    <circle cx="18" cy="32" r="1.4" />
+    <circle cx="46" cy="32" r="1.4" />
+
+    <circle cx="22" cy="22" r="1.2" />
+    <circle cx="42" cy="22" r="1.2" />
+    <circle cx="22" cy="42" r="1.2" />
+    <circle cx="42" cy="42" r="1.2" />
+
+    <circle cx="27" cy="15" r="1" />
+    <circle cx="37" cy="15" r="1" />
+    <circle cx="27" cy="49" r="1" />
+    <circle cx="37" cy="49" r="1" />
+  </g>
+</svg>
